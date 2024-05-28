@@ -7,7 +7,6 @@ import face from './face.jpeg';
 import cursed from './cursed_image.JPEG';
 import jambi from './jambi.jpeg';
 import scape from './scape.jpg';
-import scape_no_human from './scape-no-human.jpg';
 import school from './ucr.JPEG'
 import path from './path.jpg'
 import resume from './Resume.pdf';
