@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TextImage = ({ id, image, aboutContent, borderRadius, width, height }) => {
+const TextImage = ({ id, image, aboutContent, borderRadius, width, height, buttons, link}) => {
     return (
         <div id={id} className='text-image-section'>
             <div className='text-image-section-right'>
@@ -14,13 +14,15 @@ const TextImage = ({ id, image, aboutContent, borderRadius, width, height }) => 
                         </div>
                     ))}
                     <div className='button-container'>
-                        <button className='resume-button'>RESUME</button>
+                        {buttons.map((button, idx) => (
+                            <button key={idx} className={'resume-button'}><a href={link}>{button.text}</a></button>
+                        ))}
                     </div>
                 </div>
             </div>
             <div className='text-image-section-left'>
                 <img className='text-image-section-image' style={{ borderRadius: borderRadius, width: width, height: height }}
-                 src={image} alt='about' />
+                 src={image} alt='about'/>
             </div>
         </div>
     );

@@ -3,12 +3,15 @@ import { Power3, gsap } from 'gsap';
 import './App.css';
 import ImageText from './components/ImageText';
 import TextImage from './components/TextImage';
-import sex_white from './sex_white.jpeg';
+import face from './face.jpeg';
 import cursed from './cursed_image.JPEG';
 import jambi from './jambi.jpeg';
 import scape from './scape.jpg';
 import scape_no_human from './scape-no-human.jpg';
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+import school from './ucr.JPEG'
+import path from './path.jpg'
+import resume from './Resume.pdf';
+import Footer from './components/Footer';
 
 const positivity = [
     "こんにちは",
@@ -89,8 +92,7 @@ const App = () => {
             <header>
                 <nav>
                     <ul className="nav-links" ref={navlinksRef}>
-                        <li><a id="link" href="#hero-section">HERO</a></li>
-                        <li><a id="link" href="#about-section">ABOUT</a></li>
+                        <li><a id="link" href="#hero-section">ABOUT</a></li>
                         <li><a id="link" href="#skills-section">SKILLS</a></li>
                         <li><a id="link" href="#experience-section">EXPERIENCE</a></li>
                         <li><a id="link" href="#misc-section">MISC</a></li>
@@ -111,114 +113,111 @@ const App = () => {
                 <ImageText
                     id="hero-section"
                     image={cursed}
-                    title="Thomas Merritt"
-                    subtitle="Full Stack Developer"
-                    description={[
-                        "Hi, I'm Thomas. I'm a software engineer with a passion for creating and developing web applications.",
-                        "I have experience with JavaScript, React, Redux, Ruby on Rails, and SQL.",
-                        "I'm always looking for new opportunities to learn and grow as a developer.",
-                        "I'm currently seeking a full-time position as a software engineer."
+                    sections={[
+                        {
+                            title: "Thomas Merritt",
+                            subtitle: "Front-End Developer",
+                            description: [
+                                "I'm Thomas. I'm a software engineer with a passion for creating and developing web applications.",
+                            ]
+                        }
+                    
                     ]}
                 />
                 <TextImage
                     id="about-section"
-                    image={sex_white}
+                    image={face}
                     aboutContent={[
                         {
                             title: "About Me",
                             paragraphs: [
-                                "I graduated from the University of California, Santa Barbara with a Bachelor of Science in Biopsychology.",
+                                "I'm currently a student at the University of California, Riverside, studying computer science.",
+                                "I mainly have interest in front-end development, but I've also worked with back-end technologies.",
+                                "I'm always looking for new opportunities to learn and grow as a developer."
                             ]
                         },
-                        {
-                            title: "My Skills",
-                            paragraphs: [
-                                "JavaScript, React, Redux, Ruby on Rails, SQL, HTML, CSS, Git, Node.js, Express.js, PostgreSQL, MongoDB"
-                            ]
-                        },
-                        {
-                            title: "My Interests",
-                            paragraphs: [
-                                "I enjoy hiking, playing video games, and watching movies in my free time.",
-                                "I'm also interested in machine learning and artificial intelligence."
-                            ]
-                        }
                     ]}
+                    buttons={[
+                        { className: 'button-container', text: 'RESUME' },
+                    ]}
+                    link={resume}
                 />
                 <ImageText
                     id="skills-section"
-                    image={cursed}
-                    title="Thomas Merritt"
-                    subtitle="Full Stack Developer"
-                    description={[
-                        "Hi, I'm Thomas. I'm a software engineer with a passion for creating and developing web applications.",
-                        "I have experience with JavaScript, React, Redux, Ruby on Rails, and SQL.",
-                        "I'm always looking for new opportunities to learn and grow as a developer.",
-                        "I'm currently seeking a full-time position as a software engineer."
+                    image={school}
+                    sections={[
+                        {
+                            title: "University of California, Riverside (B.S. Computer Science)",
+                            subtitle: "Relevant Courses:",
+                            description: [
+                                'Algorithms & Data Structures, Discrete Math, Computer Architecture, Computer Organization, OOP, Artificial Intelligence, Operating Systems, Automata Theory, Web Development, NLP, Computer Security, Big Data',
+
+                            ]
+                        },
+                        {
+                            subtitle: "Skills:",
+                            description: [
+                                'Javascript, Java, Python, Github, HTML, CSS, React, Flutter'
+                            ]
+                        },
+                        
+                        
+
+                    
                     ]}
                 />
                 <TextImage
                     id="experience-section"
-                    image={jambi}
+                    image={path}
                     borderRadius="0%"
                     width='100%'
                     height='100%'
                     aboutContent={[
                         {
-                            title: "About Me",
+                            title: "Telcom IP",
                             paragraphs: [
-                                "I graduated from the University of California, Santa Barbara with a Bachelor of Science in Biopsychology.",
+                                "Upcoming intern to work on the development of a new full stack application."
                             ]
                         },
                         {
-                            title: "My Skills",
+                            title: "TRAPNSTUDIO",
                             paragraphs: [
-                                "JavaScript, React, Redux, Ruby on Rails, SQL, HTML, CSS, Git, Node.js, Express.js, PostgreSQL, MongoDB"
+                                " Contributed to user permission customization within Vibecue, a software designed for public venues, enabling DJ-controlled queue and voting functionalities for song selection.",
+                                "Worked with Firebase's Realtime Database and Spotify’s API system to develop quality-of-life user implementations.",
                             ]
                         },
-                        {
-                            title: "My Interests",
-                            paragraphs: [
-                                "I enjoy hiking, playing video games, and watching movies in my free time.",
-                                "I'm also interested in machine learning and artificial intelligence."
-                            ]
-                        }
                     ]}
+                    buttons={[]}
+                
                 />
 
                 <ImageText
                     id="misc-section"
-                    image={cursed}
-                    title="Thomas Merritt"
-                    subtitle="Full Stack Developer"
-                    description={[
-                        "Hi, I'm Thomas. I'm a software engineer with a passion for creating and developing web applications.",
-                        "I have experience with JavaScript, React, Redux, Ruby on Rails, and SQL.",
-                        "I'm always looking for new opportunities to learn and grow as a developer.",
-                        "I'm currently seeking a full-time position as a software engineer."
+                    image={jambi}
+                    sections={[
+                        {
+                            title: "My Interests",
+                            subtitle: "Sketching",
+                            description: [
+                                "I enjoy sketching in my free time."
+                            ]
+                        },
+                        {
+                            subtitle: "Drums",
+                            description: [
+                                "I've been playing drums for over 10 years."
+                            ]
+                        },
+                        {
+                            subtitle: "Skiing",
+                            description: [
+                                "I have been skiing for over 15 years."
+                            ]
+                        }
                     ]}
                 />  
             </div>
-
-            <ParallaxProvider>
-                <Parallax y={[-10, 10]}>
-                    <footer id='footer-links-navigation-point' className='footer-links-wrapper' style={{
-                        background: `linear-gradient(rgba(9, 23, 42), rgba(0, 0, 0, 0.2)),url(${scape_no_human}) no-repeat center center`,
-                        backgroundSize: 'cover',
-                        color: '#fff',
-                        textAlign: 'center'
-                        }}>
-                        <Parallax y={[-20, 20]} speed={20}>
-                            <ul className="footer-links">
-                                <li><a href="mailto:thomasolivermerritt@gmail.com?subject=Feedback&body=Message">EMAIL</a></li>
-                                <li><a href="https://www.linkedin.com/in/thomas-merritt-6630ab232?trk=people-guest_people_search-card">LINKEDIN</a></li>
-                                <li><a href="resume.pdf">RESUME</a></li>
-                                <li><a href="https://github.com/ThomasMerritt">GITHUB</a></li>
-                            </ul>
-                        </Parallax>
-                    </footer>
-                </Parallax>
-            </ParallaxProvider>
+            <Footer />     
         </div>
     );
 };
