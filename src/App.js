@@ -34,7 +34,8 @@ const App = () => {
         const captionElement = document.getElementById('caption');
         const footer = document.getElementsByClassName('footer-links-wrapper')[0];
 
-
+        slider.classList.toggle('fade');
+        footer.classList.toggle('fade');
         captionElement.classList.toggle('fade');
 
         const shuffleArray = (array) => {
